@@ -1,0 +1,21 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: billing-service
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/shree_billing_db}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+  flyway:
+    enabled: true
+app:
+  jwt:
+    secret: ${JWT_SECRET:}
+    issuer: shree-jewellers-auth
+  billing:
+    gst-rate: ${BILLING_GST_RATE:3.00}
