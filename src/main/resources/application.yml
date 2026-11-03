@@ -19,3 +19,9 @@ app:
     issuer: shree-jewellers-auth
   billing:
     gst-rate: ${BILLING_GST_RATE:3.00}
+  sms:
+    enabled: ${MSG91_SMS_ENABLED:false}
+    auth-key: ${MSG91_AUTH_KEY:}
+    flow-id: ${MSG91_FLOW_ID:}
+    sender-id: ${MSG91_SENDER_ID:}
+    country-code: ${MSG91_COUNTRY_CODE:91}
