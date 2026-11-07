@@ -32,7 +32,7 @@ public class InvoiceService {
    item.invoice=invoice;item.productId=requestItem.productId();item.sku=requestItem.sku().trim();
    item.description=requestItem.description().trim();item.quantity=requestItem.quantity();
    item.unitPrice=requestItem.unitPrice().setScale(2,RoundingMode.HALF_UP);
-   item.lineTotal=item.unitPrice.multiply(BigDecimal.valueOf(item.quantity())).setScale(2,RoundingMode.HALF_UP);
+   item.lineTotal=item.unitPrice.multiply(BigDecimal.valueOf(item.quantity)).setScale(2,RoundingMode.HALF_UP);
    subtotal=subtotal.add(item.lineTotal);
    invoice.items.add(item);
   }

@@ -6,7 +6,7 @@ spring:
   datasource:
     url: ${DB_URL:jdbc:mysql://localhost:3306/shree_billing_db}
     username: ${DB_USERNAME:root}
-    password: ${DB_PASSWORD:}
+    password: ${DB_PASSWORD:root}
   jpa:
     hibernate:
       ddl-auto: validate
